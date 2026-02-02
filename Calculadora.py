@@ -205,3 +205,4 @@ while True:
     continuar = str(input('Deseja continuar com a CALCULADORA [S/N]:')).upper().strip()[0]
     if continuar == 'N':
         break
+''
