@@ -185,13 +185,41 @@ while True:
             print('\033[33m[ 3 ]\033[m EXPONENCIAL')
             print('\033[33m[ 4 ]\033[m POTÊNCIA DE 10')
             opcao_logarimo= int(input('Opção:'))
+
             while opcao_logarimo != 1 and opcao_logarimo  != 2 and opcao_logarimo != 3 and opcao_logarimo != 4:
                 print('\033[31mDIGITE A OPÇÃO CERTA\033[m')
                 time.sleep(1)
                 opcao_logarimo = int(input('Opção:'))
 
+# Condições para validar as escolhas sobre LOGARITMICA...!
+            if opcao_logarimo != 1 and opcao_logarimo != 2 and opcao_logarimo != 3 and opcao_logarimo != 4:
+                print('\033[31mOPÇÃO INVÁLIDA!\033[m')
+                print('Ecolha somente 1, 2, 3 ou 4.')
+                time.sleep(1)
 
-#VER SE O USUÁRIO QUER COTINUAR NA FUNÇÃO LOGARITMICA..
+        #LOGARITIMO NATURAL
+            elif opcao_logarimo == 1:
+                logaritmo = float(input('Logartimo:'))
+                print(f'Log de {logaritmo} = {math.log1p(logaritmo):.1f}')
+
+        #LOGARITIMO BASE
+            elif opcao_logarimo == 2:
+                base = float(input('Base:'))
+                x = float(input('logaritmando:'))
+                print(f'{x} na base de{base} = {math.log(x, base):.1f}')
+
+        #EXPONENCIAL
+            elif opcao_logarimo == 3:
+                base = float(input('Base:'))
+                expoente = float(input('Expoente:'))
+                print(f'{base**expoente:.1f}')
+
+        #POTÊNCIA DE 10
+            elif opcao_logarimo == 4:
+                base = float(input('Base:'))
+                print(f'Base de {base} elevado a 10 = {math.pow(base, 10):.1f}')
+
+            #VER SE O USUÁRIO QUER COTINUAR NA FUNÇÃO LOGARITMICA..
             continuar = str(input('Deseja continuar na função LOGARÍTMICA [S/N]')).strip().upper()[0]
             if continuar == 'N':
                 print('\033[34mVOLTANDO..\033[m')
@@ -204,5 +232,9 @@ while True:
 #VERIFICAR SE O USUÁRIO QUER CONTINUAR USANDO A CALCULADORA POR COMPLETO
     continuar = str(input('Deseja continuar com a CALCULADORA [S/N]:')).upper().strip()[0]
     if continuar == 'N':
+        print('=='*20)
+        print(' ')
+        print('\033[33mOBRIGADO POR USAR MINHA CALCULADORA<3\033[m')
+        print(' ')
+        print('==' * 20)
         break
-''
